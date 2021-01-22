@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css?family=Cormorant|Overpass");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: linear-gradient(to right, #40e0d0, #1bbfaf);
+  font-family: "Overpass";
+  padding-top: 50px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  width: 450px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.joke p.setup {
+  text-indent: 3rem;
+  position: relative;
+}
+
+.joke p.setup::before {
+  content: open-quote;
+  font-size: 5rem;
+  font-weight: bold;
+  position: absolute;
+  left: -3rem;
+  top: -1rem;
+  color: #1bbfaf;
+}
+
+.joke p {
+  font-size: 1.8rem;
+}
+
+.joke p.punchline {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #40e0d0, #1bbfaf);
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn:focus,
+.btn:active {
+  border: none;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn.tweet {
+  float: right;
 }
