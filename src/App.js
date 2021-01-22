@@ -9,7 +9,7 @@ const Joke = (props) => {
     </div>
   );
 }
-
+//Application
 const App = () => {
   const [joke, setJoke] = useState({
     setup: ``,
